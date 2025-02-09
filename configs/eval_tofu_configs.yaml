@@ -1,0 +1,12 @@
+num_proc: 16
+seed: 0
+
+exp_name: "tofu"
+model_path_or_name: "models/tofu_5epoch_masked/checkpoint-60"
+tokenizer_path_or_name: ${model_path_or_name}
+out_directory: "${model_path_or_name}/${exp_name}"
+
+batch_size: 8
+generation_kwargs:
+  max_new_tokens: 50
+  do_sample: False
